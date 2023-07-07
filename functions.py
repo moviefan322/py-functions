@@ -1,4 +1,6 @@
 abc = "abcdefghijklmnopqrstuvwxyz"
+
+
 def multiply(x, y):
     result = x * y
     return result
@@ -34,8 +36,11 @@ def palindrome2(sentence):
 # else:
 #     print("'{}' is not a palindrome".format(word))
 
-word = input("Please enter a sentence to check: ")
-if palindrome2(word):
-    print("'{}' is a palindrome".format(word))
-else:
-    print("'{}' is not a palindrome".format(word))
+# word = input("Please enter a sentence to check: ")
+# if palindrome2(word):
+#     print("'{}' is a palindrome".format(word))
+# else:
+#     print("'{}' is not a palindrome".format(word))
+
+answer = multiply(18, 3)
+print(answer)

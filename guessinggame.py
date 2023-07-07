@@ -6,8 +6,9 @@ def get_integer(prompt):
         temp = input(prompt)
         if temp.isnumeric():
             return int(temp)
-        else:
-            print("Please enter a valid number")
+
+        print("'{}' is not a valid number".format(temp))
+        print("Please enter a valid number")
 
 
 highest = 1000
@@ -15,10 +16,10 @@ answer = random.randint(1, highest)
 guess = 0
 print("Please guess a number between 1 and {}: ".format(highest))
 guessCount = 0
+guess = get_integer(": ")
 
 
 while guess != answer:
-    guess = get_integer(": ")
 
     if guess == 0:
         break
