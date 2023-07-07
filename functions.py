@@ -2,17 +2,34 @@ abc = "abcdefghijklmnopqrstuvwxyz"
 
 
 def multiply(x, y):
+    """
+    Multiplies two integers provided by user.
+    :param x: Any integer
+    :param y: Another integer
+    :return: Product of the two integers
+    """
     result = x * y
     return result
 
 
 def is_palindrome(string):
+    """
+    Checks whether a string is a palindrome
+    :param string: Any string can be entered, but the function
+        can only properly handle single words
+    :return: Returns boolean value
+    """
     # backwards = string[::-1]
     # return backwards == string
     return string[::-1].casefold() == string.casefold()
 
 
 def palindrome_sentence(string):
+    """
+    Checks whether a full sentence is palindromic
+    :param string: Any sentence can be entered
+    :return: Boolean value
+    """
     sanitized = []
     for char in string:
         if char in abc:
@@ -22,6 +39,11 @@ def palindrome_sentence(string):
 
 
 def palindrome2(sentence):
+    """
+    Checks whether a full sentence is palindromic
+    :param sentence: Any sentence can be entered
+    :return: Boolean value
+    """
     string = ""
     for char in sentence:
         if char.isalnum():
