@@ -1,7 +1,7 @@
 abc = "abcdefghijklmnopqrstuvwxyz"
 
 
-def multiply(x, y):
+def multiply(x: float, y: float) -> float:
     """
     Multiplies two integers provided by user.
     :param x: Any integer
@@ -12,7 +12,7 @@ def multiply(x, y):
     return result
 
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
     """
     Checks whether a string is a palindrome
     :param string: Any string can be entered, but the function
@@ -24,7 +24,7 @@ def is_palindrome(string):
     return string[::-1].casefold() == string.casefold()
 
 
-def palindrome_sentence(string):
+def palindrome_sentence(string: str) -> bool:
     """
     Checks whether a full sentence is palindromic
     :param string: Any sentence can be entered
@@ -64,7 +64,7 @@ def palindrome2(sentence):
 # else:
 #     print("'{}' is not a palindrome".format(word))
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
     """Return the `n` th Fibonacci number, for positive `n`"""
     if 0 <= n <= 1:
         return n
@@ -80,5 +80,8 @@ def fibonacci(n):
     return result
 
 
-for i in range(36000):
+for i in range(36):
     print(i, fibonacci(i))
+
+p = palindrome_sentence(7)
+
