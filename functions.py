@@ -11,13 +11,21 @@ def is_palindrome(string):
 
 
 def palindrome_sentence(string):
-    folded = string.casefold()
     sanitized = []
-    for char in folded:
+    for char in string:
         if char in abc:
             sanitized.append(char)
     joined = "".join(sanitized)
-    return joined[::-1] == joined
+    return joined[::-1].casefold() == joined.casefold()
+
+
+def palindrome2(sentence):
+    string = ""
+    for char in sentence:
+        if char.isalnum():
+            string += char
+    # return string[::-1].casefold() == string.casefold()
+    return is_palindrome(string)
 
 
 # word = input("Please enter a word to check: ")
@@ -27,7 +35,7 @@ def palindrome_sentence(string):
 #     print("'{}' is not a palindrome".format(word))
 
 word = input("Please enter a sentence to check: ")
-if palindrome_sentence(word):
+if palindrome2(word):
     print("'{}' is a palindrome".format(word))
 else:
     print("'{}' is not a palindrome".format(word))
