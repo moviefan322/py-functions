@@ -1,8 +1,7 @@
-def banner_text(text):
-    screen_width = 80
+def banner_text(text=" ", screen_width=80):
     if len(text) > screen_width - 4:
-        print("EEK!")
-        print("THE TEXT IS TOO LONG TO FIT IN THE SPECIFIED WIDTH")
+        raise ValueError("String {0} is larger than specified width {1}"
+                         .format(text, screen_width))
 
     if text == "*":
         print('*' * screen_width)
@@ -11,10 +10,18 @@ def banner_text(text):
         print(output_string)
 
 
-banner_text("*")
-banner_text("Shit on my butt")
-banner_text("Shit on my butter")
-banner_text("Shit on my butthole")
-banner_text("Shit on my buttcheeks")
-banner_text("Shit on my buttress")
-banner_text("*")
+def pass_to_banner(array, width):
+    banner_text("*", width)
+    for item in array:
+        banner_text(item, width)
+    banner_text("*", width)
+
+
+array_to_banner = [
+    "First line of crap",
+    "second line of crap",
+    "Will this work?",
+    "Or do I suck?"
+]
+
+pass_to_banner(array_to_banner, 60)
